@@ -7,7 +7,7 @@ from tkinter.filedialog import askopenfilename
 from tkinter.filedialog import askdirectory
 
 
-#/Users/sahasramesh/Documents/python/kicks/test3.png
+#/Users/sahasramesh/Documents/python/picstokicks/test.jpg
 def Kicks(tested, name):
     def makeLayer(testpath, layerpath, num):
         def makePal(path, number):
@@ -22,7 +22,6 @@ def Kicks(tested, name):
 
             popular_words = sorted(word_counter, key = word_counter.get, reverse = True)
             palette = popular_words[:number]
-
             return palette
 
         layerPal = makePal(layerpath, 3)
@@ -32,7 +31,7 @@ def Kicks(tested, name):
             if i[3] == 0:
                 testPal.remove(i)
 
-        testPal = testPal + testPal + testPal + testPal
+        testPal = testPal + testPal
 
         l = layerPal[1]
         if len(layerPal) == 3:
@@ -52,22 +51,17 @@ def Kicks(tested, name):
         c.putdata(cData)
 
         return c
-    '''
-    c1 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/foxing.png', 0)
-    c2 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/swoosh.png', 1)
-    c3 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/midsole.png', 1)
-    c4 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/quarter.png', 3)
-    c5 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/tip.png', 4)
-    c6 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/backtab.png', 5)
-    c7 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/eyestay.png', 6)
-    c8 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/laces.png', 1)
-    c9 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/lining.png', 9)
-    c10 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/outsole.png', 2)
-    c11 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/strap.png', 10)
-    c12 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/vamp.png', 11)
-    c13 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers/tongue.png', 12)
 
-    #layer images
+    c1 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/9_swoosh.png', 0)
+    c2 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/8_quarter.png', 1)
+    c3 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/7_tongue_vamp.png', 2)
+    c4 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/6_foxing_tip.png', 3)
+    c5 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/5_outsole.png', 4)
+    c6 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/4_midsole_tongueTop.png', 5)
+    c7 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/3_eyestay_backtab.png', 6)
+    c8 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/2_strap.png', 7)
+    c9 = makeLayer(tested, '/Users/sahasramesh/Documents/python/picstokicks/layers/1_laces.png', 8)
+
     c1.paste(c2, (0, 0), mask=c2.convert('RGBA'))
     c1.paste(c3, (0, 0), mask=c3.convert('RGBA'))
     c1.paste(c4, (0, 0), mask=c4.convert('RGBA'))
@@ -76,32 +70,15 @@ def Kicks(tested, name):
     c1.paste(c7, (0, 0), mask=c7.convert('RGBA'))
     c1.paste(c8, (0, 0), mask=c8.convert('RGBA'))
     c1.paste(c9, (0, 0), mask=c9.convert('RGBA'))
-    c1.paste(c10, (0, 0), mask=c10.convert('RGBA'))
-    c1.paste(c11, (0, 0), mask=c11.convert('RGBA'))
-    c1.paste(c12, (0, 0), mask=c12.convert('RGBA'))
-    c1.paste(c13, (0, 0), mask=c13.convert('RGBA'))
 
-    t1 = Image.open('/Users/sahasramesh/Documents/python/kicks/layers/trace.png')
-    c1.paste(t1, (0, 0), mask=t1.convert('RGBA'))
-    '''
-    c1 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers2/foxtip.png', 0)
-    c2 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers2/swoosh.png', 1)
-    c3 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers2/middle.png', 1)
-    c4 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers2/outsole.png', 3)
-    c5 = makeLayer(tested, '/Users/sahasramesh/Documents/python/kicks/layers2/lacetongue.png', 4)
-
-    c1.paste(c2, (0, 0), mask=c2.convert('RGBA'))
-    c1.paste(c3, (0, 0), mask=c3.convert('RGBA'))
-    c1.paste(c4, (0, 0), mask=c4.convert('RGBA'))
-    c1.paste(c5, (0, 0), mask=c5.convert('RGBA'))
-
-    t1 = Image.open('/Users/sahasramesh/Documents/python/kicks/layers2/righttrace.png')
+    t1 = Image.open('/Users/sahasramesh/Documents/python/picstokicks/layers/0_outline.png')
     c1.paste(t1, (0, 0), mask=t1.convert('RGBA'))
 
     draw = ImageDraw.Draw(c1)
-    font = ImageFont.truetype('/Users/sahasramesh/Documents/python/kicks/nike.ttf', 40)
+    font = ImageFont.truetype('nike.ttf', 40)
     text = "AIR FORCE ONE HIGH 07 SE'" + str(name.upper()) + "'"
     draw.text((50, 815), text, fill ="black", font = font, align ="center")
+    draw.text((640, 60), "SAHASRAMESH.COM", fill ="black", font = font, align ="center")
 
     return c1
 
