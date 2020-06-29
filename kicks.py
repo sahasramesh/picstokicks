@@ -31,12 +31,13 @@ def Kicks(tested, name):
             if i[3] == 0:
                 testPal.remove(i)
 
-        testPal = testPal + testPal
+        testPal = testPal + testPal + testPal
 
         l = layerPal[1]
         if len(layerPal) == 3:
             l2 = layerPal[2]
         p = testPal[num]
+        print(p)
 
         c = Image.open(layerpath).convert('RGBA')
         cdatas = c.getdata()
